@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:me="clr-namespace:Xamarin.XamlApp;assembly=Xamarin.XamlApp" 
+             xmlns:local="clr-namespace:Xamarin.XamlApp.Shared"
+             mc:Ignorable="d" x:Class="Xamarin.XamlApp.MainPage">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <On Platform="iOS">15,50,15,15</On>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <StackLayout Margin="10,10">
+        <!-- Place new controls here -->
+        <Label Text="Login to Continue" Margin="100,50" />
+        <Label Text="Username" />
+        <Entry x:Name="txt_Username"  TextColor="{x:Static local:SharedResources.ButtonTextColor}" 
+               HeightRequest="40" TextChanged="Handle_TextChanged" 
+               Text="{x:Static me:MainPage.LoggedInUserName}" />
+        <Label Text="Password" />
+        <Entry x:Name="txt_Password" IsPassword="true" HeightRequest="40" />
+        <Button x:Name="btn_Login" BorderWidth="{x:Static me:MainPage.AppBorderWidth}" BorderColor="Silver" FontAttributes="Bold" IsEnabled="false" Text="Sign In" BackgroundColor="Blue" TextColor="White" HeightRequest="40" Margin="0,25" />
+    </StackLayout>
+</ContentPage>
