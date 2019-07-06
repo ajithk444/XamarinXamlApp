@@ -1,5 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin.XamlApp.Views.HomePage">
     <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="75" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Label x:Name="lblMessage" Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="0" BackgroundColor="Red" TextColor="White" />
+            <Label Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="1" BackgroundColor="Blue" TextColor="White" />
+            <Label Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="2" BackgroundColor="Green" TextColor="White" />
+            <Label Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="3" BackgroundColor="Yellow" TextColor="White" />
+
+        </Grid>
     </ContentPage.Content>
+    <!--<StackLayout>
+        <Label Text="Start" HorizontalOptions="Start" BackgroundColor="Silver" />
+        <Label Text="Center" HorizontalOptions="Center" BackgroundColor="Silver" />
+        <Label Text="End" HorizontalOptions="End" BackgroundColor="Silver" />
+        <Label Text="Fill" HorizontalOptions="Fill" BackgroundColor="Silver" />
+    </StackLayout>-->
 </ContentPage>

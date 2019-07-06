@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.XamlApp.Views;
 
 namespace Xamarin.XamlApp
 {
@@ -24,18 +25,19 @@ namespace Xamarin.XamlApp
             txt_Username.TextChanged += Handle_TextChanged;
         }
 
-        void Handle_Clicked(Object sender, EventArgs e)
+        async void Handle_Clicked(Object sender, EventArgs e)
         {
-            LoggedInUserName = "ajithk444";
-            txt_Username.Text = LoggedInUserName;
+            //LoggedInUserName = "ajithk444";
+            //txt_Username.Text = LoggedInUserName;
             Debug.WriteLine("Clicked by : " + txt_Username.Text + " | "+btn_Login.BorderWidth);
+            await Navigation.PushAsync(new HomePage(txt_Username.Text));
         }
 
         void Handle_TextChanged(object sender, Xamarin.Forms.TextChangedEventArgs e)
         {
             if (txt_Username.Text!=null && txt_Username.Text.Length > 0)
             {
-                btn_Login.IsEnabled = true;
+                //btn_Login.IsEnabled = true;
             }
         }
     }

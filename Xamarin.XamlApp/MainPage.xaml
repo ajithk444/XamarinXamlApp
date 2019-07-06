@@ -18,6 +18,6 @@
                Text="{x:Static me:MainPage.LoggedInUserName}" />
         <Label Text="Password" />
         <Entry x:Name="txt_Password" IsPassword="true" HeightRequest="40" />
-        <Button x:Name="btn_Login" BorderWidth="{x:Static me:MainPage.AppBorderWidth}" BorderColor="Silver" FontAttributes="Bold" IsEnabled="false" Text="Sign In" BackgroundColor="Blue" TextColor="White" HeightRequest="40" Margin="0,25" />
+        <Button x:Name="btn_Login" BorderWidth="{x:Static me:MainPage.AppBorderWidth}" BorderColor="Silver" FontAttributes="Bold" Text="Sign In" BackgroundColor="Blue" TextColor="White" HeightRequest="40" Margin="0,25" />
     </StackLayout>
 </ContentPage>

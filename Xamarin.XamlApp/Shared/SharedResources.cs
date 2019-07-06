@@ -12,7 +12,7 @@ namespace Xamarin.XamlApp.Shared
 
         public static Color ButtonTextColor
         {
-            get { return Color.Yellow; }
+            get { return Color.Black; }
         }
     }
 }
