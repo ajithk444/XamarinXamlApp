@@ -3,22 +3,33 @@
     <ContentPage.Content>
         <Grid>
             <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="75" />
+                <RowDefinition />
+                <RowDefinition />
                 <RowDefinition Height="2*" />
             </Grid.RowDefinitions>
-            <Label x:Name="lblMessage" Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="0" BackgroundColor="Red" TextColor="White" />
-            <Label Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="1" BackgroundColor="Blue" TextColor="White" />
-            <Label Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="2" BackgroundColor="Green" TextColor="White" />
-            <Label Text="Hello, Good Morning. You have 8 tasks for today." Grid.Row="3" BackgroundColor="Yellow" TextColor="White" />
-
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Label XAlign="End" Grid.Row="0" Grid.Column="0" BackgroundColor="Green" Text="Total Amount" />
+                <Label XAlign="Start" Grid.Row="0" Grid.Column="1" BackgroundColor="Red" x:Name="lblTotalAmount"/>
+                <Label XAlign="End" Grid.Row="1" Grid.Column="0" BackgroundColor="Green" Text="GST"/>
+                <Label XAlign="Start" Grid.Row="1" Grid.Column="1" BackgroundColor="Red"  x:Name="lblGST"/>
+                <Label XAlign="End" Grid.Row="2" Grid.Column="0" BackgroundColor="Green" Text="Actual Billed Amount"/>
+                <Label XAlign="Start" Grid.Row="2" Grid.Column="1" BackgroundColor="Red" x:Name="lblTotalBilledAmount"/>
+            </Grid>
+            <BoxView Grid.Row="1" Grid.Column="0" BackgroundColor="Navy" />
+            <BoxView Grid.Row="2" Grid.Column="1" BackgroundColor="Navy" />
         </Grid>
     </ContentPage.Content>
-    <!--<StackLayout>
-        <Label Text="Start" HorizontalOptions="Start" BackgroundColor="Silver" />
-        <Label Text="Center" HorizontalOptions="Center" BackgroundColor="Silver" />
-        <Label Text="End" HorizontalOptions="End" BackgroundColor="Silver" />
-        <Label Text="Fill" HorizontalOptions="Fill" BackgroundColor="Silver" />
-    </StackLayout>-->
 </ContentPage>

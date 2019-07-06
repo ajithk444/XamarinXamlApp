@@ -10,7 +10,7 @@ namespace Xamarin.XamlApp.Views
         public HomePage(string userName)
         {
             InitializeComponent();
-            lblMessage.Text = lblMessage.Text + userName;
+            //lblMessage.Text = lblMessage.Text + userName;
             //btnBackButton.Clicked += BackButton_Clicked;
         }
 
