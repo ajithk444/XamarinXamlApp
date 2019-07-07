@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin.XamlApp.Views.RegisterPage">
+    <ContentPage.Content>
+        <Grid Padding="25,25,25,25">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Text="Bill"  VerticalOptions="Center"  />
+            <Entry Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
+            <Label Grid.Row="1" Grid.Column="0" Text="Tip"  VerticalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="txtTip"  VerticalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="0" Text="Total"  VerticalOptions="Center"  />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="txtTotal" VerticalOptions="Center"  />
+            <Label Grid.Row="3" Grid.Column="0" YAlign="End" Text="Tip Prcentage" />
+            <Label Grid.Row="3" Grid.Column="1" YAlign="End" x:Name="txtTipPercentage" />
+            <Slider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Minimum="0" Maximum="100" Value="15" />
+            <Button Grid.Row="5" Grid.Column="0" Text="15%" BackgroundColor="Silver" />
+            <Button Grid.Row="5" Grid.Column="1" Text="20%" BackgroundColor="Silver" />
+            <Button Grid.Row="6" Padding="25,25,25,25" Grid.Column="0" Text="Round Down" BackgroundColor="Silver" />
+            <Button Grid.Row="6" Padding="25,25,25,25" Grid.Column="1" Text="Round Up" BackgroundColor="Silver" />
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

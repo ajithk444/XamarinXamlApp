@@ -19,13 +19,18 @@ namespace Xamarin.XamlApp
         public static string LoggedInUserName = "rsak90";
         public MainPage()
         {
-            
             InitializeComponent();
             btn_Login.Clicked += Handle_Clicked;
+            btn_Register.Clicked += Register_Clicked;
             txt_Username.TextChanged += Handle_TextChanged;
         }
 
-        async void Handle_Clicked(Object sender, EventArgs e)
+        void Register_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new RegisterPage());
+        }
+
+        async void Handle_Clicked(object sender, EventArgs e)
         {
             //LoggedInUserName = "ajithk444";
             //txt_Username.Text = LoggedInUserName;
