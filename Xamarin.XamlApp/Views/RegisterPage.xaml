@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Xamarin.XamlApp.Views.RegisterPage">
     <ContentPage.Content>
+<!--        <Page.Resources>
+            <Color x:Key="ButtonBackgroundColor">Blue</Color>
+        </Page.Resources>-->
         <Grid Padding="25,25,25,25">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -15,12 +18,12 @@
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="Auto" />
             </Grid.RowDefinitions>
-            <Label Grid.Row="0" Grid.Column="0" Text="Bill"  VerticalOptions="Center"  />
-            <Entry Grid.Row="0" Grid.Column="1" VerticalOptions="Center"/>
-            <Label Grid.Row="1" Grid.Column="0" Text="Tip"  VerticalOptions="Center" />
-            <Label Grid.Row="1" Grid.Column="1" x:Name="txtTip"  VerticalOptions="Center" />
-            <Label Grid.Row="2" Grid.Column="0" Text="Total"  VerticalOptions="Center"  />
-            <Label Grid.Row="2" Grid.Column="1" x:Name="txtTotal" VerticalOptions="Center"  />
+            <Label Grid.Row="0" Grid.Column="0" Text="Bill" VerticalOptions="Center" />
+            <Entry Grid.Row="0" Grid.Column="1" VerticalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="0" Text="Tip" VerticalOptions="Center" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="txtTip" VerticalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="0" Text="Total" VerticalOptions="Center" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="txtTotal" VerticalOptions="Center" />
             <Label Grid.Row="3" Grid.Column="0" YAlign="End" Text="Tip Prcentage" />
             <Label Grid.Row="3" Grid.Column="1" YAlign="End" x:Name="txtTipPercentage" />
             <Slider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Minimum="0" Maximum="100" Value="15" />
